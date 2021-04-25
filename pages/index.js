@@ -4,6 +4,13 @@ import styles from "../styles/Home.module.css";
 import { addDataLayer } from "../map/addDataLayer";
 
 
+
+
+import hi from "../lib/posts";
+import Graph from "../lib/graphs";
+
+
+
 const mapboxgl = require("mapbox-gl/dist/mapbox-gl.js");
 
 export default function Home() {
@@ -11,7 +18,7 @@ export default function Home() {
   const [pageIsMounted, setPageIsMounted] = useState(false)
   const [Map, setMap] = useState();
   
-  mapboxgl.accessToken = 
+  mapboxgl.accessToken = "pk.eyJ1Ijoib3Z5OTUiLCJhIjoiY2tuYnI5ZHI1MDVvNDJ2b2FzaDJja3lvcCJ9.imylaw3Zbt-htP9aQsR42g"
 
   useEffect(() => {
     setPageIsMounted(true)
@@ -33,8 +40,14 @@ export default function Home() {
       }
     }, [pageIsMounted, setMap, Map]);
   
+    
+      
   
   return (
+
+
+
+
     <div className={styles.container}>
       <Head>
         <title>Create Next App</title>
@@ -48,7 +61,12 @@ export default function Home() {
       <main className={styles.main}>
         <h3>A map of London</h3>
         <div id="my-map" style={{ height: 500, width: 500 }} />
+        
+
+      <Graph></Graph>
+<hi></hi>
       </main>
+
 
       <footer className={styles.footer}>
         <a
@@ -62,4 +80,6 @@ export default function Home() {
       </footer>
     </div>
   );
+  
 }
+
