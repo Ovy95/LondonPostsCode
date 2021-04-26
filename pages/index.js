@@ -2,16 +2,9 @@ import Head from "next/head";
 import { useEffect,useState } from "react";
 import styles from "../styles/Home.module.css";
 import { addDataLayer } from "../map/addDataLayer";
-
-
-
-
-import hi from "../lib/posts";
+const mapboxgl = require("mapbox-gl/dist/mapbox-gl.js");
 import Graph from "../lib/graphs";
 
-
-
-const mapboxgl = require("mapbox-gl/dist/mapbox-gl.js");
 
 export default function Home() {
   
@@ -64,7 +57,7 @@ export default function Home() {
         
 
       <Graph></Graph>
-<hi></hi>
+
       </main>
 
 
