@@ -6,6 +6,7 @@ export function addDataLayer(map) {
     data: 'https://raw.githubusercontent.com/sjwhitworth/london_geojson/master/london_postcodes.json'
   });
 
+
  // Add a new layer to visualize the polygon.
 map.addLayer({
   'id': 'places',
@@ -64,6 +65,10 @@ map.addLayer({
     map.on('mouseleave', 'places', function () {
     map.getCanvas().style.cursor = '';
     });
+
+ 
+
+
 
 }
 
