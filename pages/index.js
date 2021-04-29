@@ -23,15 +23,12 @@ export default function Home() {
         style: "mapbox://styles/mapbox/streets-v11",
         center: [-0.1271489487312465,51.505593452532054],
         zoom: 9,
-
       });
 
       var geocoder = new MapboxGeocoder({
         accessToken: "pk.eyJ1Ijoib3Z5OTUiLCJhIjoiY2tuYnI5ZHI1MDVvNDJ2b2FzaDJja3lvcCJ9.imylaw3Zbt-htP9aQsR42g",
         mapboxgl: mapboxgl,
-        marker: {
-          color: 'orange'
-          },
+        marker: false 
       }); 
     map.addControl(geocoder)
       
