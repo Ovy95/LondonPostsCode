@@ -46,16 +46,11 @@ map.addLayer({
 
     var displayMessage = '<strong> ' +name+ '</strong>'+'<p>'+description+'</p>'
 
-
-
     new mapboxgl.Popup()
     .setLngLat(coordinates[0])
     .setHTML(displayMessage)
     .addTo(map);
     });
-
-
-     
     // Change the cursor to a pointer when the mouse is over the places layer.
     map.on('mouseenter', 'places', function () {
     map.getCanvas().style.cursor = 'pointer';
@@ -65,11 +60,6 @@ map.addLayer({
     map.on('mouseleave', 'places', function () {
     map.getCanvas().style.cursor = '';
     });
-
- 
-
-
-
 }
 
 // When a click event occurs on a feature in the places layer, open a popup at the
