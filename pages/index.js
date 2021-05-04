@@ -42,6 +42,9 @@ export default function Home() {
         });
       }
     }, [pageIsMounted, setMap, Map]);
+
+    
+    
   
   return (
 
@@ -69,7 +72,9 @@ export default function Home() {
 
         
 
-      <Graph></Graph>
+      <Graph>
+
+      </Graph>
 
       </main>
 
